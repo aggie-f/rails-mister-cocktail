@@ -1,0 +1,33 @@
+.banner {
+  background-image: url("retro.png");
+  background-size: cover;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  // color: white;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // font-size: 32px;
+  // font-weight: bold;
+  // position: absolute;
+  // top: 15%;
+  // right: 12%;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.btn-banner {
+    position: absolute;
+    top: 28%;
+    // right: 15%;
+    background-color: #D74836;
+    color: white;
+    font-size: 16px;
+    padding: 12px 28px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
