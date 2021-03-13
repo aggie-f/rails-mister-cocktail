@@ -1,21 +1,23 @@
 <div class="container">
-  <h1 class="cocktail-name text-center mb-5"><%= @cocktail.name %></h1>
-  <div class="row justify-content-center">
     <% if @cocktail.photo.attached? %>
-      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class="ingredients-box">
+      <%= cl_image_tag @cocktail.photo.key %>
     <% else %>
-      <p>No image attached</p>
+     <%= image_tag ("cocktails.jpg") %>
     <% end %>
+      <div class="ingredient-box">
+        <h1 class="text-center mb-5"><%= @cocktail.name %></h1>
+        <div class="ingredients">
+          <h1>Ingredients</h1>
+          <ul>
+            <% @cocktail.doses.each do |dose| %>
+              <li><%= dose.description%> <%= dose.ingredient.name %><%= link_to "Remove", dose_path(dose), method: :delete %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
   </div>
 
-  <div class="card my-3">
-    <h1>Ingredients</h1>
-    <ul>
-      <% @cocktail.doses.each do |dose| %>
-        <li><%= dose.description%> <%= dose.ingredient.name %><%= link_to "Remove", dose_path(dose), method: :delete %>
-      </li><% end %>
-    </ul>
-  </div>
 
   <div class="show-links">
     <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id), class: 'btn btn-outline-secondary' %>
