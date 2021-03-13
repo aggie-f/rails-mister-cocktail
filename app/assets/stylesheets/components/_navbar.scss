@@ -1,12 +1,35 @@
-.navbar-lewagon {
+.navbar-retro_cocktails {
   justify-content: space-between;
   background: white;
+  font-family: $headers-font;
+  font-size: 30px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-retro_cocktails .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-retro_cocktails .navbar-brand img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+
+// #navbar-text {
+//   a {
+//     color: red;
+//   }
+//   a:hover {
+//   color: $orange;
+// }
+// }
+#navbar-text {
+  color: $orange;
+  transition: .2s;
+  display: inline-block;
+  margin-right: 35px;
+
+  &:hover {
+   color: $dark-blue;
+  }
 }
