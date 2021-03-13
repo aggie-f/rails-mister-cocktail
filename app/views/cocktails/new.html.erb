@@ -1,7 +1,4 @@
-<h1>Create a new cocktail!</h1>
-
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="container mt-5">
+  <h1 class="text-center">Create a new cocktail!</h1>
+</div>
+<%= render 'shared/form' %>

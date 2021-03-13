@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3 ">
+      <div class="form">
+        <%= simple_form_for @cocktail do |f| %>
+          <%= f.input :name, input_html: { class: 'input' }%>
+          <label class="btn submit">
+            Add a photo
+            <span style="display:none;">
+              <%= f.input :photo, as: :file %>
+            </span>
+          </label> <br>
+          <%= f.button :submit, input_html: { class: 'submit' } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
