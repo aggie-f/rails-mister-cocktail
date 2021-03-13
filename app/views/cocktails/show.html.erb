@@ -9,12 +9,10 @@
   </div>
 
   <div class="card my-3" style="width: 18rem;">
-    <div class="card-header">
-      Ingredients
-    </div>
-    <ul class="list-group list-group-flush">
+    <h1>Ingredients</h1>
+    <ul>
       <% @cocktail.doses.each do |dose| %>
-        <li class="list-group-item"><%= dose.description%> <%= dose.ingredient.name %> <%= link_to "Remove", dose_path(dose), method: :delete %>
+        <li><%= dose.description%> <%= dose.ingredient.name %> <%= link_to "Remove", dose_path(dose), method: :delete %>
       </li><% end %>
     </ul>
   </div>
