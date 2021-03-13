@@ -1,0 +1,52 @@
+.card-image {
+  object-fit: cover;
+  height: 350px;
+}
+
+.cocktails-wrapper{
+  margin: 40px auto;
+  color: $dark-blue;
+//   width: 100%;
+//   background-image: url("background.png");
+//   background-size: cover;
+}
+
+.cocktail-cards {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+
+.card {
+
+  // background-color: $charcoal;
+  // border: 1px solid $orange;
+  width: 500px;
+  border-radius: 3px;
+  text-align: center;
+
+}
+
+
+.btn {
+  color: $dark-blue;
+  border: 1px solid $orange;
+  border-radius: 5px;
+
+    &:hover {
+      background-color: $orange;
+      color: $white;
+    }
+}
+
+
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .card {
+    width: 100vw;
+  }
+}
+
+
