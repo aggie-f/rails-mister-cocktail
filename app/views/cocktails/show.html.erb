@@ -8,20 +8,23 @@
     <% end %>
   </div>
 
-  <div class="card my-3" style="width: 18rem;">
+  <div class="card my-3">
     <h1>Ingredients</h1>
     <ul>
       <% @cocktail.doses.each do |dose| %>
-        <li><%= dose.description%> <%= dose.ingredient.name %> <%= link_to "Remove", dose_path(dose), method: :delete %>
+        <li><%= dose.description%> <%= dose.ingredient.name %><%= link_to "Remove", dose_path(dose), method: :delete %>
       </li><% end %>
     </ul>
   </div>
 
-<%= link_to "Create a new dose", new_cocktail_dose_path(@cocktail) %>
-<br>
-<%= link_to "Homepage", cocktails_path, class: "btn btn-primary" %>
-
-
+  <div class="show-links">
+    <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id), class: 'btn btn-outline-secondary' %>
+    <%= link_to 'Edit Cocktail', edit_cocktail_path(@cocktail.id), class: 'btn btn-outline-secondary' %>
+    <%= link_to 'Delete Cocktail', cocktail_path(@cocktail.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-secondary delete-btn' %>
+  </div>
+  <br>
+  <%= link_to "Homepage", cocktails_path, class: "btn btn-primary" %>
+</div>
 
 
 
@@ -41,5 +44,19 @@
   <button type="button" class="btn btn-light" style="padding: 20px 50px; color: black;"><span> <%= link_to "Add doses", new_cocktail_dose_path(@cocktail) %> </span></button><br> <br>
   <button type="button" class="btn btn-light" style="padding: 20px 50px; color: black;"><span> <%= link_to "Back to Cocktails", "/cocktails" %> </span> </button>
 </div> -->
+<!-- <div class="cocktail-container">
+  <h1 class="cocktail-name text-center mb-5"><%= @cocktail.name %></h1>
+  <div class="cocktail-details">
+    <ul>
+      <h5 class="cocktail-doses">Ingredients</h5>
+      <% @cocktail.doses.each do |dose| %>
+        <li class="cocktail-doses"><%= dose.description %> - <%= dose.ingredient.name %></li>
+      <% end %>
+    </ul>
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key, height: 400, width:400, crop: :fill, class: 'show-image' %>
+    <% end %>
+  </div>
 
+</div> -->
 
