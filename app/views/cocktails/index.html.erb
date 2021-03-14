@@ -16,8 +16,8 @@
           <%= cl_image_tag cocktail.photo.key, class: 'card-img-top card-image' %>
         <% end %>
         <div class="card-body">
-          <h2 class="card-title"><%= cocktail.name %></h2>
-          <%= link_to 'See the recipe', cocktail_path(cocktail), class: "btn btn-outline-secondary" %>
+          <h1 class="card-title"><%= cocktail.name %></h1>
+          <%= link_to 'recipe', cocktail_path(cocktail), class: "btn btn-outline-secondary" %>
         </div>
       </div>
     <% end %>

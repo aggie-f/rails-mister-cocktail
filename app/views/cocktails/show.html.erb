@@ -1,7 +1,7 @@
 <div class="cocktail-page">
   <h1 class="text-center"><%= @cocktail.name %></h1>
   <hr>
-  <div class="ingredients-box container">
+  <div class="cocktail-box container">
     <% if @cocktail.photo.attached? %>
       <%= cl_image_tag @cocktail.photo.key %>
     <% else %>
@@ -10,20 +10,18 @@
       <div class="ingredient-box">
         <h2>Ingredients:</h2>
         <div class="ingredients">
-            <% @cocktail.doses.each do |dose| %>
-              <p><%= dose.description%> <%= dose.ingredient.name %></p>
-            <% end %>
-          </ul>
+          <% @cocktail.doses.each do |dose| %>
+            <p><%= dose.description%> <%= dose.ingredient.name %></p>
+          <% end %>
         </div>
       </div>
 
-  <div class="show-links">
-    <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id), class: 'btn btn-outline-secondary' %>
-    <%= link_to 'Edit Cocktail', edit_cocktail_path(@cocktail.id), class: 'btn btn-outline-secondary' %>
-    <%= link_to 'Delete Cocktail', cocktail_path(@cocktail.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-secondary delete-btn' %>
+    <div class="show-links">
+      <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id), class: 'btn' %>
+      <%= link_to 'Edit Cocktail', edit_cocktail_path(@cocktail.id), class: 'btn' %>
+      <%= link_to 'Delete Cocktail', cocktail_path(@cocktail.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete-btn' %>
+    </div>
   </div>
-  </div>
-
 </div>
 
 

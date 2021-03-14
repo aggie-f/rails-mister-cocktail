@@ -1,0 +1,79 @@
+.cocktail-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+  color: white;
+
+  hr {
+    height: 4px;
+    width: 160px;
+    background: white;
+    margin-bottom: 30px;
+  }
+}
+
+
+.cocktail-box {
+  position: relative;
+  text-align: center;
+  color: white;
+
+    img {
+    display: block;
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 25px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-size: cover;
+    background-position: center;
+    filter: brightness(40%)
+  }
+
+}
+
+.ingredient-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  // border-radius: 5px;
+  // background-color: rgba(255, 255, 255, .15);
+  // backdrop-filter: blur(6px);
+  // padding: 10px;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.ingredients {
+  font-family: 'Quando', serif;
+  text-transform: uppercase;
+}
+
+.show-links {
+  text-align: center;
+  padding: 20px;
+
+  .btn {
+  color: $dark-blue;
+  border: 1px solid $white;
+  border-radius: 5px;
+  background-color: $white;
+  margin: 15px;
+
+  &:hover {
+      background-color: $orange;
+      color: white;
+      border: 1px solid $white;
+
+    }
+  }
+}
+
+

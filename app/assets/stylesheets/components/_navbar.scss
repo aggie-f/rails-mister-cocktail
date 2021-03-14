@@ -39,8 +39,19 @@
   width: 100%;
   background: transparent;
   box-shadow: none;
-  .navbar-wagon-link {
+
+  #navbar-text {
+
+    &:hover {
     color: white;
-    font-weight: bold;
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-color: $orange;
+  }
+
+  .navbar-toggler {
+    background-color: $orange;
   }
 }

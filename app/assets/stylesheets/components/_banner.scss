@@ -17,16 +17,16 @@
   p {
     color: white;
     opacity: .8;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: lighter;
     margin-bottom: 50px;
   }
 
   .btn-banner {
-  padding: 15px 50px;
+  padding: 15px 40px;
   background-color: #D74836;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -35,9 +35,7 @@
   .btn-banner:hover {
   background-color: white;
   color: #D74836;
-  font-size: 20px;
-  color: #D74836;
-  border: none;
+  border: 1px solid $orange;
   cursor: pointer;
   border-radius: 5px;
   text-decoration: none;

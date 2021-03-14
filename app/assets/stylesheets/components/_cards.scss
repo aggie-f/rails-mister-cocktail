@@ -16,12 +16,11 @@
   align-items: center;
   width: 100%;
 
+
 }
 
 
 .card {
-
-  // background-color: $charcoal;
   // border: 1px solid $orange;
   width: 500px;
   border-radius: 3px;
@@ -37,7 +36,9 @@
 
     &:hover {
       background-color: $orange;
-      color: $white;
+      color: white;
+      border: 1px solid $orange;
+
     }
 }
 
