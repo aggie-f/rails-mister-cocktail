@@ -32,4 +32,15 @@
   &:hover {
    color: $dark-blue;
   }
+
+}
+.navbar-home {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  .navbar-wagon-link {
+    color: white;
+    font-weight: bold;
+  }
 }
