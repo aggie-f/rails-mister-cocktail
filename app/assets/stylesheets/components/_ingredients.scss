@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Quando&display=swap');
+
+hr {
+  height: 4px;
+  width: 160px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.cocktail-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+  color: white;
+}
+
+
 .ingredients-box {
 
   // display: flex;
@@ -7,24 +25,10 @@
   position: relative;
   text-align: center;
   color: white;
-}
-.ingredient-box {
-  //   height: 60vh;
-  // width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, .15);
 
-  backdrop-filter: blur(5px);
-  }
-
-.ingredients-box img {
+  img {
   display: block;
-  height: 400px;
+  padding: 30px;
   width: 60%;
   object-fit: cover;
   margin-left: auto;
@@ -32,5 +36,55 @@
   // background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   background-size: cover;
   background-position: center;
+  filter: brightness(50%)
 }
 
+}
+.ingredient-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  // border-radius: 5px;
+  // background-color: rgba(255, 255, 255, .15);
+  // backdrop-filter: blur(6px);
+
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.ingredients {
+  font-family: 'Quando', serif;
+  text-transform: uppercase;
+}
+
+
+.show-links {
+  text-align: center;
+  padding: 20px;
+}
+
+.ingredients-edit {
+  font-family: 'Quando', serif;
+  padding: 10px 60px;
+    margin-top: 50px;
+
+  ul {
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    padding: 40px;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: red;
+    font-size: 14px;
+  }
+
+}
